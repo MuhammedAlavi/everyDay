@@ -63,7 +63,7 @@ const {name:n, greet:hello } = a;// hello works but greet is undefined and the s
  * Fat arrow function
  */
 const a = () => console.log('hello');
-const a = () => { console.log('hello') }
+const a = () => { console.log('hello'); return;}
 const a = (a) => a + 1;
 const a = a => a + 1;
 
