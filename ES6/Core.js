@@ -5,13 +5,15 @@
 if (true) {
   var x = "hello";
 }
-console.log(x); // output: hello
+console.log(x); // output: hello 
+
 // using let
 if (true) {
   let x = "hello";
   // or const x = 'hello'
 }
 console.log(x); // output: "ReferenceError: x is not defined
+
 // inner and outer block scope
 let x = "x";
 if (true) {
@@ -44,7 +46,7 @@ const [b, c] = a; // b = 1, c = 2
 const [b, , c] = a; // b = 1, c = 3
 const [, , , d] = a; // d = undefined (imagine array as an infinite array)
 const [, , , d = "defaultValue"] = a; // d = defaultValue
-const [a = "defaultValue", , , d = "defaultValue"] = a; //a = 1, d = defaultValue
+const [b = "defaultValue", , , d = "defaultValue"] = a; //b = 1, d = defaultValue
 
 // swap the value using destructuring
 const a = 5;
@@ -56,7 +58,7 @@ const a = { name: "mamad", age: 29, height: 178 , greet:()=>'hello!'};
 // object are not base on order
 const { name, age } = a;
 const { age, name } = a;
-const { name, , height } = a; /* "SyntaxError: Unexpected token ','*/  
+const { name, , height } = a; // SyntaxError: Unexpected token ','  
 const {name:n, greet:hello } = a;// hello works but greet is undefined and the same for name
 
 /**
