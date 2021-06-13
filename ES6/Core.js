@@ -26,7 +26,8 @@ console.log(x); //output: x
  * const , let
  */
 const a = [1, 2, 3];
-a.push(4); // right, because array are reference and we didn't change the reference but the values of that reference
+a.push(4); // right, because array are reference and we didn't change the reference
+          // but the values of that reference
 
 // same for object
 const b = { name: "mamad" };
@@ -58,21 +59,30 @@ const a = { name: "mamad", age: 29, height: 178 , greet:()=>'hello!'};
 // object are not base on order
 const { name, age } = a;
 const { age, name } = a;
-const { name, , height } = a; // SyntaxError: Unexpected token ','  
-const {name:n, greet:hello } = a;// hello works but greet is undefined and the same for name
+
+const { name, , height } = a; /* "SyntaxError: Unexpected token ','*/  
+const { name: n, greet: hello } = a;// hello works but greet is undefined and the 
+                                    //same for name
 
 /**
  * Fat arrow function
  */
 const a = () => console.log('hello');
-const a = () => { console.log('hello') }
+const a = () => { console.log('hello'); return;}
 const a = (a) => a + 1;
 const a = a => a + 1;
 
 const a = (v) => v + 5;
 a(3, 3, 3); // excess arguments are ignored.
 
-// differences between fat arrow and regular function. 1. syntax 2. arguments object in regular function is accessible 3. this ( in arrow this points to first non-arrow parent but regular function bind this to where it call.) 4. using new in regular is possible (constructable and callable) but arrow is just callable 5. duplicate arguments is allowed in regular function
+// differences between fat arrow and regular function. 
+//1. syntax 
+// 2. arguments object in regular function is accessible
+// 3. this( in arrow this points to first non - arrow parent but regular
+// function bind this to where it call.) 
+// 4. using new in regular is possible(constructable and callable) 
+// but arrow is just callable
+// 5. duplicate arguments is allowed in regular function
 const outarrow = () => {
         console.log("hello " + this); // no 'this' binding here
     }
